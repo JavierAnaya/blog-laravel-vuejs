@@ -20,8 +20,6 @@ class CreatePostsTable extends Migration
             $table->longText('code')->nullable();
             $table->unsignedInteger('client_id');
             $table->foreign('client_id')->references('id')->on('clients');
-            $table->unsignedInteger('post_id');
-            $table->foreign('post_id')->references('id')->on('posts');
             $table->timestamps();
         });
     }
